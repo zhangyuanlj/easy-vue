@@ -4,15 +4,14 @@ const resolve = function (dir) {
 }
 module.exports = (config) => {
     const srcDir = "../src";
-    const easyVueDir = `../easy-vue`;
     //配置路径别名
     config.resolve.alias
         .set('@', resolve(srcDir))
-        .set('easy-vue', resolve(easyVueDir))
-        .set('animations', resolve(`${easyVueDir}/animations`))
-        .set('components', resolve(`${easyVueDir}/components`))
-        .set('core', resolve(`${easyVueDir}/core`))
-        .set('libs', resolve(`${easyVueDir}/libs`))
-        .set('utils', resolve(`${easyVueDir}/utils`))
-        .set('mixins', resolve(`${easyVueDir}/mixins`));
+        .set('easy-vue', resolve(srcDir))
+        .set('animations', resolve(`${srcDir}/animations`))
+        .set('components', resolve(`${srcDir}/components`))
+        .set('core', resolve(`${srcDir}/core`))
+        .set('libs', resolve(`${srcDir}/libs`))
+        .set('utils', resolve(`${srcDir}/utils`))
+        .set('mixins', resolve(`${srcDir}/mixins`));
 };

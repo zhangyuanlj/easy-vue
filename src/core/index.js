@@ -58,6 +58,7 @@ class EasyVue {
         } = this.defaults;
         this.setupConfig();
         this.setupRouter(beforeEnter, afterEnter);
+        this.setupViewUI();
         return new Vue({
             router: this.router,
             render: h => h(RootApp),
